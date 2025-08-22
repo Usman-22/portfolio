@@ -3,15 +3,7 @@
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  FaWordpress,
-  FaCheck,
-  FaClock,
-  FaUsers,
-  FaGlobeAmericas,
-  FaTools,
-} from "react-icons/fa";
-import { SiWordpress, SiPhp, SiWoo } from "react-icons/si";
+import { FaWordpress, FaCheck } from "react-icons/fa";
 
 export default function Experience() {
   const experiences = [
@@ -96,27 +88,6 @@ export default function Experience() {
     },
   ];
 
-  const certifications = [
-    {
-      title: "WordPress Certified Developer",
-      issuer: "WordPress.org",
-      year: "2023",
-      icon: SiWordpress,
-    },
-    {
-      title: "WooCommerce Expert Certification",
-      issuer: "WooCommerce",
-      year: "2022",
-      icon: SiWoo,
-    },
-    {
-      title: "PHP Advanced Certification",
-      issuer: "PHP Institute",
-      year: "2021",
-      icon: SiPhp,
-    },
-  ];
-
   const industryExpertise = [
     {
       category: "Service-Based Businesses",
@@ -157,32 +128,6 @@ export default function Experience() {
         "Commercial Real Estate",
         "Property Listing Portals",
       ],
-    },
-  ];
-
-  const remoteSkills = [
-    {
-      icon: FaGlobeAmericas,
-      title: "Global Communication",
-      description:
-        "Fluent in English, experienced in cross-cultural communication",
-    },
-    {
-      icon: FaClock,
-      title: "Time Zone Flexibility",
-      description: "Available to work in US, EU, and APAC time zones",
-    },
-    {
-      icon: FaUsers,
-      title: "Team Collaboration",
-      description:
-        "Proficient with Slack, Zoom, Asana, Trello, and Git workflows",
-    },
-    {
-      icon: FaTools,
-      title: "Development Tools",
-      description:
-        "Expert with VS Code, Local WP, Docker, and staging environments",
     },
   ];
 
@@ -308,44 +253,12 @@ export default function Experience() {
           </div>
         </motion.div>
 
-        {/* Certifications */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h3 className="text-3xl font-bold text-center mb-12">
-            Certifications
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="text-center hover:shadow-lg transition-all duration-300 border-0 bg-card/30 backdrop-blur-sm">
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <cert.icon className="w-8 h-8 text-primary" />
-                    </div>
-                    <h4 className="font-semibold mb-2">{cert.title}</h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      {cert.issuer}
-                    </p>
-                    <Badge variant="outline">{cert.year}</Badge>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* Industry Expertise */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mb-20"
         >
           <h3 className="text-3xl font-bold text-center mb-12">
             Industry Expertise & Project Categories
@@ -374,35 +287,6 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Remote Work Skills */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <h3 className="text-3xl font-bold text-center mb-12">
-            Remote Work Excellence
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {remoteSkills.map((skill, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="h-full hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <skill.icon className="w-6 h-6 text-primary" />
-                    </div>
-                    <h4 className="font-semibold mb-3">{skill.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {skill.description}
-                    </p>
                   </CardContent>
                 </Card>
               </motion.div>

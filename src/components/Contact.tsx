@@ -37,15 +37,41 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Using Formspree for form handling - sends to tusman878@gmail.com
+      const response = await fetch("https://formspree.io/f/xpwzgkqr", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          _replyto: formData.email,
+        }),
+      });
 
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
-
-    // You would typically send the data to your backend here
-    console.log("Form submitted:", formData);
+      if (response.ok) {
+        // Reset form on success
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        alert(
+          "Thank you! Your message has been sent successfully to tusman878@gmail.com"
+        );
+      } else {
+        alert(
+          "Sorry, there was an error sending your message. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert(
+        "Sorry, there was an error sending your message. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [

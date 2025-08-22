@@ -234,7 +234,7 @@ export default function About() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { number: "100+", label: "Flatsome Sites Built" },
+            { number: "100+", label: "WordPress & Flatsome Sites Built" },
             { number: "5+", label: "Years WordPress Experience" },
             { number: "10+", label: "Custom Themes Created" },
             { number: "15+", label: "Industry Categories" },

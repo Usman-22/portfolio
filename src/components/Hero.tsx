@@ -117,9 +117,18 @@ export default function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          className="flex justify-center mb-16"
         >
-          <Button size="lg" className="group">
+          <Button
+            size="lg"
+            className="group"
+            onClick={() => {
+              const element = document.querySelector("#projects");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
             View WordPress Projects
             <motion.div
               className="ml-2"
@@ -128,9 +137,6 @@ export default function Hero() {
             >
               →
             </motion.div>
-          </Button>
-          <Button variant="outline" size="lg">
-            Hire for Remote Work
           </Button>
         </motion.div>
 
