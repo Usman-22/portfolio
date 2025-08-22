@@ -48,6 +48,7 @@ export default function Projects() {
       featured: true,
       links: {
         demo: "https://advancedholisticcenter.com/",
+        github: undefined,
       },
       icon: FaBusinessTime,
     },
@@ -67,6 +68,7 @@ export default function Projects() {
       featured: true,
       links: {
         demo: "https://uzairahmedm50.sg-host.com/",
+        github: undefined,
       },
       icon: FaBusinessTime,
     },
@@ -86,6 +88,7 @@ export default function Projects() {
       featured: true,
       links: {
         demo: "https://instagreencapital.com/",
+        github: undefined,
       },
       icon: FaBusinessTime,
     },
@@ -105,6 +108,7 @@ export default function Projects() {
       featured: true,
       links: {
         demo: "https://hitechedvpanels.com/",
+        github: undefined,
       },
       icon: FaShoppingCart,
     },
@@ -124,6 +128,7 @@ export default function Projects() {
       featured: true,
       links: {
         demo: "https://qual-pro.com/",
+        github: undefined,
       },
       icon: FaBusinessTime,
     },
@@ -143,6 +148,7 @@ export default function Projects() {
       featured: true,
       links: {
         demo: "https://primeassuredins.com/",
+        github: undefined,
       },
       icon: FaBusinessTime,
     },
